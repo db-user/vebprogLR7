@@ -4,11 +4,17 @@
 
 ## Можливості
 
+
 - CRUD операції для **товарів** та **категорій**
+
 - Аутентифікація через JWT
+
 - Автоматично генерована документація: **Swagger UI** і **ReDoc**
+
 - Автоматизовані тести з **pytest**
+
 - Підтримка тестового середовища з окремою БД
+
 - Логування всіх HTTP-запитів
 
 ---
@@ -16,26 +22,34 @@
 ## Встановлення
 
 1. **Клонування репозиторію**
+
    ```bash
-   git clone https://github.com/yourusername/auto-parts-api.git
+   
+   git clone https://github.com/db-user/vebprogLR7.git
+   
    cd auto-parts-api
-2. **Створити віртуальне середовище**
+   
+3. **Створити віртуальне середовище**
 
 python -m venv venv
+
 source venv/bin/activate  # або venv\Scripts\activate на Windows
 
 3. **Встановити залежності**
 
-
 pip install -r requirements.txt
 
 ## База даних
+
 Створити таблиці:
+
 python init_db.py
+
 За замовчуванням використовується SQLite (test.db).
 
 ## Запуск додатку
 uvicorn app.main:app --reload
+
 Відкрийте в браузері:
 
 Swagger: http://127.0.0.1:8000/docs
@@ -64,6 +78,7 @@ POST /items/?category_id=1
 pytest
 
 **Структура тестів:**
+
 tests/test_main.py — базові тести доступності
 
 tests/test_crud.py — перевірка CRUD-функціоналу
@@ -71,17 +86,24 @@ tests/test_crud.py — перевірка CRUD-функціоналу
 Для тестування створюється окрема БД (test_test.db), визначена у .env.test.
 
 ## Логування
+
 Усі HTTP-запити логуються в консоль у форматі:
 
 2025-04-27 14:00:00 - INFO - Request: GET http://127.0.0.1:8000/items/
+
 2025-04-27 14:00:00 - INFO - Response status: 200
+
 ## OpenAPI
 OpenAPI-специфікація доступна за адресою:
 
 http://127.0.0.1:8000/openapi.json
+
 Її можна використати для генерації клієнтів або документації.
 
 ## Автор
+
 Заяць Ілля
+
 Група: ІПЗ-41
+
 Проєкт створено в рамках лабораторних робіт з курсу «Веб-програмування».
