@@ -23,14 +23,17 @@
 
 python -m venv venv
 source venv/bin/activate  # або venv\Scripts\activate на Windows
+
 3. **Встановити залежності**
 
 
 pip install -r requirements.txt
+
 ## База даних
 Створити таблиці:
 python init_db.py
 За замовчуванням використовується SQLite (test.db).
+
 ## Запуск додатку
 uvicorn app.main:app --reload
 Відкрийте в браузері:
